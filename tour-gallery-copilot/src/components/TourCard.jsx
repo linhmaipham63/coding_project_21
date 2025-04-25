@@ -26,3 +26,5 @@ function TourCard({ tour, removeTour }) {
     </div>
   );
 }
+
+export default TourCard;
