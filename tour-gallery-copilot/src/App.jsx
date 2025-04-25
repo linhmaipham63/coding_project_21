@@ -27,4 +27,25 @@ function App() {
     }
   };
 
+  useEffect(() => {
+    fetchTours();
+  }, []);
+
+  const removeTour = (id) => {
+    setTours(tours.filter((tour) => tour.id !== id));
+  };
+
+  if (loading) {
+    return <h1>Loading...</h1>;
+  }
+
+  if (error) {
+    return <h1>Error: {error}</h1>;
+  }
+
+  
+}
+
+export default App;
+
   
