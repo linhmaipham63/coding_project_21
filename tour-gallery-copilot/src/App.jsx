@@ -27,37 +27,4 @@ function App() {
     }
   };
 
-  useEffect(() => {
-    fetchTours();
-  }, []);
-
-  const removeTour = (id) => {
-    setTours(tours.filter((tour) => tour.id !== id));
-  };
-
-  if (loading) {
-    return <h1>Loading...</h1>;
-  }
-
-  if (error) {
-    return <h1>Error: {error}</h1>;
-  }
-
-  if (tours.length === 0) {
-    return (
-      <div>
-        <h1>No Tours Left</h1>
-        <button onClick={fetchTours}>Refresh</button>
-      </div>
-    );
-  }
-
-  return (
-    <div>
-      <h1>Our Tours</h1>
-      <Gallery tours={tours} removeTour={removeTour} />
-    </div>
-  );
-}
-
-export default App;
+  
